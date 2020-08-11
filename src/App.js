@@ -14,6 +14,14 @@ function App() {
     setTranslation({ ...translation, [e.target.name]: e.target.value });
   };
 
+  const submitText = (e) => {
+    e.preventDefault();
+    setTranslation({
+      ...translation,
+      translationList: [...translation.translationList],
+    });
+  };
+
   return (
     <div className="App">
       <div className="container">
